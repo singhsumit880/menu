@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, );
+      overflow-x: hidden;
+      transition: 1s;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover,.overlay a:focus {
+      color: #f1f1f1;
+    }
+    
+    .content {
+      padding: 30px, 50px;
+      line-height: 1.9;
+      width: 80%;
+      margin-left: 10%;
+      text-align: justify;
+    }
+
+    .menu {
+      font-weight: bold;
+      font-size: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="margin-top: 2%;">
+    <div style="float: right;margin-right: 5%;">
+      <h2>LOGO</h2>
+    </div>
+    <div style="width: 60px;margin-left:5%;">
+      <span id="obtn" onclick="openNav()" class="menu">&#9776;</span>
+      <span id="cbtn" onclick="closeNav()" style="display:none;" class="menu">&#10005;</span></div>
+  </div>
+  <div id="main">
+
+    <div>
+      <div id="myNav" class="overlay">
+        <div class="overlay-content">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="content" id="text">
+      <h1>What is API ?</h1>
+      <p>An API or Application Programming Interface is an intermediary which carries request/response data between the
+        endpoints of a channel. We can visualize an analogy of API to that of a waiter in a restaurant. A typical waiter
+        in a restaurant would welcome you and ask for your order. He/She confirms the same and carries this message and
+        posts it to the order queue/kitchen. As soon as your meal is ready, he/she also retrieves it from the kitchen to
+        your table. As such, in a typical scenario, when a client endpoint requests a resource from a resource server
+        endpoint, this request is carried via the API to the server. There are a various relevant information that are
+        carried by the APIs which conform to certain specification of schema such as that provided by OpenAPI, GraphQL
+        etc. This information may include endpoints URL, operations(GET, POST, PUT etc), authentication methods, tokens,
+        license and other operational parameters. APIs most commonly follow the JSON and XML format as its key mode of
+        exchanging request/response while some also adhere to the YAMLformat.
+
+        An API or Application Programming Interface is an intermediary which carries request/response data between the
+        endpoints of a channel. We can visualize an analogy of API to that of a waiter in a restaurant. A typical waiter
+        in a restaurant would welcome you and ask for your order. He/She confirms the same and carries this message and
+        posts it to the order queue/kitchen. As soon as your meal is ready, he/she also retrieves it from the kitchen to
+        your table. As such, in a typical scenario, when a client endpoint requests a resource from a resource server
+        endpoint, this request is carried via the API to the server. There are a various relevant information that are
+        carried by the APIs which conform to certain specification of schema such as that provided by OpenAPI, GraphQL
+        etc. This information may include endpoints URL, operations(GET, POST, PUT etc), authentication methods, tokens,
+        license and other operational parameters. APIs most commonly follow the JSON and XML format as its key mode of
+        exchanging request/response while some also adhere to the YAMLformat.
+      </p>
+    </div>
+  </div>
+  </div>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "60%";
+      document.getElementById("cbtn").style.display = "block";
+      document.getElementById("obtn").style.display = "none";
+      document.getElementById("text").style.display = "none";
+
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+      document.getElementById("cbtn").style.display = "none";
+      document.getElementById("obtn").style.display = "block";
+      document.getElementById("text").style.display = "block";
+
+    }
+  </script>
+
+</body>
+
+</html>
